@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  PutItemFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: putItem.handler
+      Runtime: nodejs16.x
+      Role: arn:aws:iam::009558327831:role/LambdaExecRole
+      Environment:
+        Variables:
+          TableName: !Ref LabTable
+
+  LabTable:
+    Type: AWS::Serverless::SimpleTable
