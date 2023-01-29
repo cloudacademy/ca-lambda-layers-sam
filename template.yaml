@@ -5,6 +5,7 @@ Resources:
   PutItemFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: NodejsLabFunction
       CodeUri: src/
       Handler: putItem.handler
       Runtime: nodejs16.x
