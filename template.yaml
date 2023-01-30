@@ -2,7 +2,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 
 Resources:
-  PutItemFunction:
+  # DynamoDB Table
+  LabTable:
+    Type: AWS::Serverless::SimpleTable
+
+  # Lambda Function
+  NodejsLabFunction:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: NodejsLabFunction
@@ -14,5 +19,4 @@ Resources:
         Variables:
           TableName: !Ref LabTable
 
-  LabTable:
-    Type: AWS::Serverless::SimpleTable
+  # Lambda Layer
