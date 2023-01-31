@@ -5,7 +5,6 @@ Resources:
   # DynamoDB Table
   LabTable:
     Type: AWS::Serverless::SimpleTable
-    TableName: LabTable
 
   # Lambda Function
   NodejsLabFunction:
@@ -21,3 +20,7 @@ Resources:
           TableName: !Ref LabTable
 
   # Lambda Layer
+
+Outputs:
+  TableName:
+    Value: !Ref LabTable
