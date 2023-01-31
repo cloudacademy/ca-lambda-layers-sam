@@ -5,7 +5,7 @@ stack_name = "sam-layers"
 [default.deploy.parameters]
 region = "us-west-2"
 s3_bucket = "REPLACE_BUCKET_NAME"
-s3_prefix = "api"
+s3_prefix = "layers"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
 tags = "project=\"ca-labs\" stage=\"development\""
