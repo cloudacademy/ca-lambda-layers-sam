@@ -6,6 +6,6 @@ stack_name = "sam-layers"
 region = "us-west-2"
 s3_bucket = "REPLACE_BUCKET_NAME"
 s3_prefix = "layers"
-confirm_changeset = true
+confirm_changeset = false
 capabilities = "CAPABILITY_IAM"
 tags = "project=\"ca-labs\" stage=\"development\""
